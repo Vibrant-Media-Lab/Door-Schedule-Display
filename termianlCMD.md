@@ -1,10 +1,11 @@
 # Set up Pi Zero
+## Configure Pi
 Open terminal, use command to enter the configuration page
 sudo raspi-config
 Choose Interfacing Options -> SPI -> Yes  to enable SPI interface
 RPI open spi.png
 
-
+## Install Libraries
 Reboot Raspberry Pi：
 sudo reboot
 Please makre sure that SPI interface was not used by other device
