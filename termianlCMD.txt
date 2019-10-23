@@ -1,3 +1,4 @@
+# Set up Pi Zero
 Open terminal, use command to enter the configuration page
 sudo raspi-config
 Choose Interfacing Options -> SPI -> Yes  to enable SPI interface
