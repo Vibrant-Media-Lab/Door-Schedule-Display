@@ -60,10 +60,10 @@ Open terminal and execute command to download demo codes
 
 
 Open up the python terminal  
-` python `  
-Run examples, xxx is the name of the e-Paper. For example, if you want to run codes of 1.54inch e-Paper Module, you xxx should ` be epd_1in54 `  
-` cd python/examples ` 
-` #python2 `  
-` sudo python xxx.py `  
-` #python3 `  
-` sudo python3 xxx.py `  
+``` python ```
+Run examples, xxx is the name of the e-Paper. For example, if you want to run codes of 1.54inch e-Paper Module, you xxx should ``` be epd_1in54 ```  
+``` cd python/examples ``` 
+``` #python2 ```  
+``` sudo python xxx.py ```  
+``` #python3 ```  
+``` sudo python3 xxx.py ```  
