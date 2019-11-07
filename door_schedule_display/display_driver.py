@@ -15,6 +15,8 @@ from waveshare_epd import epd7in5
 import time
 from PIL import Image,ImageDraw,ImageFont
 import traceback
+from document_interface import * 
+
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -42,6 +44,8 @@ try:
     draw.rectangle((10, 80, 630, 360), outline = 0)
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
+
+    print(get_doc())
 
     logging.info("Goto Sleep...")
     epd.sleep()
