@@ -2,10 +2,13 @@
 # -*- coding:utf-8 -*-
 import sys
 import os
-picdir = 'home/pi/e-Paper/RaspberryPi&JetsonNano/python/pic'
-libdir = 'home/pi/e-Paper/RaspberryPi&JetsonNano/python/lib'
+picdir = '/home/pi/e-Paper/RaspberryPi&JetsonNano/python/pic'
+libdir = '/home/pi/e-Paper/RaspberryPi&JetsonNano/python/lib'
 if os.path.exists(libdir):
     sys.path.append(libdir)
+else: 
+    print('ERROR: Cannot find library...exiting')
+    sys.exit()
 
 import logging
 from waveshare_epd import epd7in5

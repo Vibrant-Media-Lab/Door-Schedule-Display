@@ -1,2 +1,0 @@
-bcm2835_init: Unable to open /dev/mem: No such file or directory
-FAIL test (exit status: 1)
