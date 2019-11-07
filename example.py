@@ -33,17 +33,11 @@ try:
     Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
     draw = ImageDraw.Draw(Himage)
     draw.text((10, 0), '20', font = font72, fill = 0)
-    draw.text((270, 0), 'Vibrant Media Lab', font = font48, fill = 0)
+    draw.text((160, 0), 'Vibrant Media Lab', font = font48, fill = 0)
     draw.line((255, 15, 360, 15), fill = 0)
-    draw.text((240, 20), 'Student Worker Schedule', font = font24, fill = 0)
-    draw.text((10, 0), '19', font = font72, fill = 0)  
+    draw.text((120, 20), 'Student Worker Schedule', font = font24, fill = 0)
+    draw.text((310, 0), '19', font = font72, fill = 0)  
     draw.rectangle((20, 40, 560, 360), outline = 0)
-    epd.display(epd.getbuffer(Himage))
-    time.sleep(2)
-    
-    
-    logging.info("3.read bmp file")
-    Himage = Image.open(os.path.join(picdir, '7in5.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
 
