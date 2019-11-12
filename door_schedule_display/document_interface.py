@@ -17,15 +17,18 @@ from __future__ import print_function
 import pickle
 import os.path
 import json
+import logging
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+
+logging.getLogger('googleapicliet.discovery_cache').setLevel(logging.ERROR)
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
 
 # The ID of a sample document.
-DOCUMENT_ID = '1m1OONPcYiX71fdmhbBedbs-Fh690KT_1zZle52vIj-Y'
+DOCUMENT_ID = '1nwFP7-tiCmU3g6_ctxyhKiiuLuDDl9KTs9k8T1UO_Lc'
 
 def read_paragraph_element(element):
     """Returns the text in the given ParagraphElement.
