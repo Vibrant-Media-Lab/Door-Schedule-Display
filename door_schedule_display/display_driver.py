@@ -39,9 +39,22 @@ try:
     draw = ImageDraw.Draw(Himage)
     draw.text((10, 0), '20', font = font72, fill = 0)
     draw.text((130, 0), 'Vibrant Media Lab', font = font48, fill = 0)
-    draw.text((120, 60), 'Student Worker Schedule', font = font24, fill = 0)
-    draw.text((610, 0), '19', font = font72, fill = 0)  
-    draw.rectangle((10, 80, 630, 360), outline = 0)
+    draw.text((120, 80), 'Student Worker Schedule', font = font24, fill = 0)
+    draw.text((610, 0), '20', font = font72, fill = 0)  
+    draw.rectangle((10, 100, 630, 360), outline = 2)
+    #Name
+    draw.rectangle((10, 100, 100, 180), outline = 1)
+    #Monday
+    draw.rectangle((100, 100, 150, 180), outline = 1)
+    #Tuesday
+    draw.rectangle((150, 100, 200, 180), outline = 1)
+    #Wednesday
+    draw.rectangle((200, 100, 250, 180), outline = 1)
+    #Thursday
+    draw.rectangle((250, 100, 300, 180), outline = 1)
+    #Friday
+    draw.rectangle((300, 100, 350, 180), outline = 1)
+
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
 
