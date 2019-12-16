@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START docs_quickstart]
 from __future__ import print_function
 import pickle
 import os.path
@@ -26,9 +25,6 @@ logging.getLogger('googleapicliet.discovery_cache').setLevel(logging.ERROR)
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/documents.readonly']
-
-# The ID of a sample document.
-DOCUMENT_ID = '1nwFP7-tiCmU3g6_ctxyhKiiuLuDDl9KTs9k8T1UO_Lc'
 
 def read_paragraph_element(element):
     """Returns the text in the given ParagraphElement.
@@ -70,7 +66,7 @@ def read_strucutural_elements(elements):
     return text
 
 
-def get_doc():
+def get_doc(doc_id):
     """Shows basic usage of the Docs API.
     Prints the title of a sample document.
     """
@@ -95,6 +91,6 @@ def get_doc():
 
     service = build('docs', 'v1', credentials=creds)
 
-    doc = service.documents().get(documentId=DOCUMENT_ID).execute()
+    doc = service.documents().get(documentId=doc_id).execute()
     doc_content = doc.get('body').get('content')
     return read_strucutural_elements(doc_content)
