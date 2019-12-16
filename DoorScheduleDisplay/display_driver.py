@@ -33,7 +33,7 @@ class DisplayDriver(object):
     def display_data(self, data):
         try: 
             self.epd.init()
-            Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
+            Himage = Image.new('1', (self.epd.width, self.epd.height), 255)  # 255: clear the frame
             
             draw = ImageDraw.Draw(Himage)
             draw.text((130, 10), 'Vibrant Media Lab', font = self.font48, fill = 0)
@@ -50,7 +50,7 @@ class DisplayDriver(object):
             dt_string = now.strftime("%m/%d/%Y")
             draw.text((15, 335), 'Last updated at {}'.format(dt_string), font = self.font18, fill = 0)
 
-            epd.display(epd.getbuffer(Himage))
+            self.epd.display(self.epd.getbuffer(Himage))
 
             return True
         except IOError as e:

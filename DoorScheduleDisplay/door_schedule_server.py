@@ -35,7 +35,7 @@ class DoorScheduleServer(object):
             try: 
                 data = self.accept_connections()
                 if data is not None: 
-                    success = self.display_driver.display_data(data)
+                    success = self._disp_driver.display_data(data)
                     print("Success in displaying data: {}".format(success))
 
                 # update every second
