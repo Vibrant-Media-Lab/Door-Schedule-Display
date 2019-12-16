@@ -36,10 +36,8 @@ class DisplayDriver(object):
             Himage = Image.new('1', (epd.width, epd.height), 255)  # 255: clear the frame
             
             draw = ImageDraw.Draw(Himage)
-            draw.text((10, 0), '20', font = self.font72, fill = 0)
             draw.text((130, 10), 'Vibrant Media Lab', font = self.font48, fill = 0)
             draw.text((250, 65), 'Lab Schedule', font = self.font24, fill = 0)
-            draw.text((540, 0), '20', font = self.font72, fill = 0)  
             draw.rectangle((10, 100, 630, 360), outline = 2)
             
             # grab latest doc 
@@ -49,7 +47,7 @@ class DisplayDriver(object):
             
             # get time updated
             now = datetime.now()
-            dt_string = now.strftime("%m/%d/%Y %H:%M:%S")
+            dt_string = now.strftime("%m/%d/%Y")
             draw.text((15, 335), 'Last updated at {}'.format(dt_string), font = self.font18, fill = 0)
 
             epd.display(epd.getbuffer(Himage))
