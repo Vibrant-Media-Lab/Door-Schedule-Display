@@ -6,8 +6,12 @@ Critical Making Project to send data to a Raspberry Pi Zero that gets displayed 
 ### Requirements: 
 
 - Python 3 
-- Install pybluez on client and server [link](https://github.com/pybluez/pybluez/blob/master/docs/install.rst)
+- [Install pybluez](https://github.com/pybluez/pybluez/blob/master/docs/install.rst) on client and server
 - See [DisplayInstall](DisplayInstall.md) for instructions on setting up the E-Ink display with a Raspberry Pi Zero
+
+### Notes on installation and running: 
+- You may have to run the scripts as sudo if a permission denied error occurs.
+- On Linux, you may have to run Bluetooth in compatibility mode. If that occurs, see [here](https://stackoverflow.com/questions/36675931/bluetooth-btcommon-bluetootherror-2-no-such-file-or-directory/46810116) and reboot.
 
 ### Running: 
 * On the Raspberry Pi, run `python3 door_schedule_server.py`
