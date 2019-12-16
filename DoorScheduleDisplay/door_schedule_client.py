@@ -46,8 +46,11 @@ class DoorScheduleSender(object):
     def cleanup(self): 
         self.sock.close()
 
-def main(client):
-    if len(sys.argv) < 2: 
+def main():
+    # TODO: copy Pi mac address here
+    addr_pi = "MAC_ADDR_HERE"
+
+    if len(sys.argv) < 2:
         # default mode
         DOCUMENT_ID = '1nwFP7-tiCmU3g6_ctxyhKiiuLuDDl9KTs9k8T1UO_Lc'
 
@@ -58,6 +61,7 @@ def main(client):
             client.cleanup()
             raise
 
+        client = DoorScheduleSender(addr_pi)
         client.send_data(lines)
         print("Successfully sent Google Doc to Pi")
     elif sys.argv[1].strip() == "doc":
@@ -75,6 +79,7 @@ def main(client):
                 client.cleanup()
                 raise
 
+            client = DoorScheduleSender(addr_pi)
             client.send_data(lines)
             print("Successfully sent Google Doc {} to Pi".format(DOCUMENT_ID))
 
@@ -97,8 +102,4 @@ def print_usage():
     print(buf)
 
 if __name__ == "__main__": 
-    # TODO: copy Pi mac address here
-    addr_pi = "PI_MAC_ADDR"
-    door_sender = DoorScheduleSender(addr_pi)
-
-    main(door_sender)
+    main()
