@@ -53,7 +53,8 @@ def main():
     if len(sys.argv) < 2:
         # default mode
         DOCUMENT_ID = '1nwFP7-tiCmU3g6_ctxyhKiiuLuDDl9KTs9k8T1UO_Lc'
-
+        client = DoorScheduleSender(addr_pi)
+        
         try: 
             lines = "\n".join(get_doc(DOCUMENT_ID).split('\n')[3:8])
         except Exception: 
@@ -61,7 +62,6 @@ def main():
             client.cleanup()
             raise
 
-        client = DoorScheduleSender(addr_pi)
         client.send_data(lines)
         print("Successfully sent Google Doc to Pi")
     elif sys.argv[1].strip() == "doc":
