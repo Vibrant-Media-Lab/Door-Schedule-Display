@@ -6,7 +6,7 @@ import pathlib
 from pathlib import Path
 
 picdir = Path('/home/pi/e-Paper/RaspberryPi_JetsonNano/python/pic')
-libdir = Path('/home/pi/e-Paper/RaspberryPi_JetsonNano/python/lib')
+libdir = Path('/home/pi/e-Paper/RaspberryPi_JetsonNano/python/lib/waveshare_epd')
 if os.path.exists(libdir):
     sys.path.append(libdir)
 else: 
@@ -17,7 +17,7 @@ import logging
 import time 
 import traceback 
 
-from waveshare_epd import epd7in5
+import epd7in5
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 
