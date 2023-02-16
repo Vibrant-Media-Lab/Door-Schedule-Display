@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 import sys
 import os
+import pathlib
 
-picdir = 'e-Paper/RaspberryPi&JetsonNano/python/pic'
-libdir = 'e-Paper/RaspberryPi&JetsonNano/python/lib'
+from pathlib import Path
+
+picdir = Path('/home/pi/e-Paper/RaspberryPi_JetsonNano/python/pic')
+libdir = Path('/home/pi/e-Paper/RaspberryPi_JetsonNano/python/lib')
 if os.path.exists(libdir):
     sys.path.append(libdir)
 else: 
