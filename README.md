@@ -19,7 +19,7 @@ Critical Making Project to send data to a Raspberry Pi Zero that gets displayed 
       - we added the folder Fall2023DoorScheduleDisplay. In there, you'll find client and server code as well as a web scraper that scrapes the VML's website and gives you the hours hopefully, you'll be able to use             this to proceed with the project. There is also starter code for a client and server if you choose to go down that path, but we decided not to as the pi can be connected to wifi by itself and scrape the                information on its own without any client helping it.
 
 
-### Requirements: 
+### Requirements (prior to Fall 2023): 
 
 - Python 3 
 - [Install pybluez](https://github.com/pybluez/pybluez/blob/master/docs/install.rst) on client and server
