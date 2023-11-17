@@ -16,7 +16,7 @@ Critical Making Project to send data to a Raspberry Pi Zero that gets displayed 
  * Outcome:
     - we got to the part of the tutorial where you run the code (C or Python) to send an image to the e-ink display. The diplay ended up drawing two horizontal lines, and nothing else, and thats as far as we got.
 * New Code added
-      - we added the folder Fall2023DoorScheduleDisplay. In there, you'll find client and server code as well as a web scraper that scrapes the VML's website and gives you the hours hopefully, you'll be able to use             this to proceed with the project. There is also starter code for a client and server if you choose to go down that path, but we decided not to as the pi can be connected to wifi by itself and scrape the                information on its own without any client helping it.
+    - we added the folder Fall2023DoorScheduleDisplay. In there, you'll find client and server code as well as a web scraper that scrapes the VML's website and gives you the hours hopefully, you'll be able to use             this to proceed with the project. There is also starter code for a client and server if you choose to go down that path, but we decided not to as the pi can be connected to wifi by itself and scrape the                information on its own without any client helping it.
 
 
 ### Requirements (prior to Fall 2023): 
