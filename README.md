@@ -3,6 +3,22 @@
 Critical Making Project to send data to a Raspberry Pi Zero that gets displayed on a WaveShare 7" E-Ink display. 
 
 ## Getting Started
+
+### Notes From The Fall 2023 Project Group: 
+* SSH
+    - IP: for us it was 172.20.10.9, but you can use the command "ifconfig" to view the IP under "inet"
+      - ssh into raspberry pi from external computer: ssh pi@172.20.10.9
+    - Username: pi
+    - Password: einkpi
+* In the home directory of the Raspberry Pi, there are two main directories
+    - e-Paper: we created this by following this tutorial from start to finish https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_Manual#Working_With_Raspberry_Pi. It has all the test files that should display               something to the E-Ink display.
+    - Door-Schedule-Display: the starter code left for us by the previous group, but we couldn't figure out how to run and make it work.
+ * Outcome:
+    - we got to the part of the tutorial where you run the code (C or Python) to send an image to the e-ink display. The diplay ended up drawing two horizontal lines, and nothing else, and thats as far as we got.
+* New Code added
+      - we added the folder Fall2023DoorScheduleDisplay. In there, you'll find client and server code as well as a web scraper that scrapes the VML's website and gives you the hours hopefully, you'll be able to use             this to proceed with the project. There is also starter code for a client and server if you choose to go down that path, but we decided not to as the pi can be connected to wifi by itself and scrape the                information on its own without any client helping it.
+
+
 ### Requirements: 
 
 - Python 3 
