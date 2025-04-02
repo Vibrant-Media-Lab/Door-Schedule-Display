@@ -4,6 +4,24 @@ Critical Making Project to send data to a Raspberry Pi Zero that gets displayed 
 
 ## Getting Started
 
+### Notes from the Fall 2024 group:
+- Logistics:
+    - Pi Username: vml | Password: eink
+    - We decided to completely reinstall the pi OS as it was running incredibly slowly and we were unable to SSH into it. We decided against Linux with GUI as it was running incredibly slowly
+    - Unfortunately, we were unable to connect the pi to PittNet or PITT-MDA. We used phone hotspots to SSH into the pi.
+    - Due to lack of Linux experience, we held off of scheduling the pi to run the appropriate scripts on boot. During testing, we had trouble and decided it would be better for someone with more Linux experience to set it up instead
+- Packages:
+    - Similarly to the Fall 2023 group, we installed the appropriate packages and dependencies by following the manufacturer's tutorial.
+    - Aside from standard Python libraries, this project used the BeautifulSoup4 library to parse HTML from the VML schedule document, as well as PIL to generate the images for the display.
+- Aside from finishing up the networking and automation of all necessary scripts to run sequentially, there are a few improvements that could be made, such as:
+    - Integrating the button that is connected to the housing as some sort of wake/refresh button. This might require soldering to the board in order to function while the pi is truly powered off
+    - Making a new housing/casing for the whole display, as the current one has a few quirks (such as the ribbon cable sticking out of the bottom and the screen and pi not being fixed to the case)
+    - Improving/restructuring the code, such as:
+        - Abstracting certain sections into separate functions
+        - Using terminal/command line input for params rather than global variables declared at the start of the script. 
+        - Combine the various scripts into one script that executes all parts of the process
+    - Testing generalizability with other screens/screen sizes, exploring other e-ink display applications, etc.
+
 ### Notes From The Fall 2023 Project Group: 
 * SSH
     - IP: for us it was 172.20.10.9, but you can use the command "ifconfig" to view the IP under "inet"
